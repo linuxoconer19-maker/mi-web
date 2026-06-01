@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidad de Apoyo Real</title>
+    <style>
+        /* ==========================================================================
+           1. ESTILOS GENERALES Y FONDO
+           ========================================================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            /* Busca directamente tu archivo de fondo guardado como fondo.jpg */
+            background: #0a0a12 url('fondo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .contenedor-principal {
+            width: 100%;
+            max-width: 420px;
+        }
+
+        /* ==========================================================================
+           2. TARJETA CENTRAL (Efecto Vidrio Cyberpunk)
+           ========================================================================== */
+        .tarjeta {
+            background: rgba(13, 11, 22, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            border-radius: 24px;
+            padding: 35px 25px;
+            text-align: center;
+            color: #ffffff;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+        }
+
+        /* Círculo con Brillo Neón Morado */
+        .neon-logo {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px auto;
+            background: rgba(138, 43, 226, 0.2);
+            border: 2px solid #a855f7;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px #8b5cf6, inset 0 0 10px #8b5cf6;
+        }
+
+        .icono-telegram svg {
+            width: 40px;
+            height: 40px;
+            transform: translate(-2px, 2px);
+        }
+
+        /* Textos Principales */
+        h1 {
+            font-size: 1.6rem;
+            letter-spacing: 2px;
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        .resaltado-morado {
+            color: #a855f7;
+            text-shadow: 0 0 10px rgba(168, 85, 247, 0.6);
+        }
+
+        .lema {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            color: #94a3b8;
+            margin-top: 8px;
+            margin-bottom: 25px;
+        }
+
+        /* ==========================================================================
+           3. RECUADRO DE INFORMACIÓN CENTRAL
+           ========================================================================== */
+        .caja-info {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            padding: 20px 15px;
+            margin-bottom: 25px;
+        }
+
+        .caja-info h3 {
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            color: #f1f5f9;
+        }
+
+        .caja-info p {
+            font-size: 0.8rem;
+            color: #cbd5e1;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+
+        .caja-info .subtexto {
+            font-size: 0.78rem;
+            color: #94a3b8;
+            margin-bottom: 0;
+        }
+
+        /* Iconos inferiores */
+        .caracteristicas {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 15px;
+        }
+
+        .caracteristicas div span {
+            font-size: 1.2rem;
+        }
+
+        .caracteristicas div p {
+            font-size: 0.55rem;
+            font-weight: bold;
+            color: #94a3b8;
+            margin-top: 4px;
+            letter-spacing: 0.5px;
+            line-height: 1.1;
+        }
+
+        /* ==========================================================================
+           4. BOTONES (BOTONERA)
+           ========================================================================== */
+        .boton {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            margin: 12px 0;
+            border-radius: 12px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .boton-morado {
+            background: linear-gradient(90deg, #2e1065, #4c1d95);
+            border: 1px solid #7c3aed;
+        }
+
+        .boton-azul {
+            background: linear-gradient(90deg, #075985, #0369a1);
+            border: 1px solid #0284c7;
+        }
+
+        .texto-izq {
+            color: #ffffff;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .texto-der {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.75rem;
+        }
+
+        .boton:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Pie de página */
+        .pie-pagina {
+            font-size: 0.7rem;
+            color: #a855f7;
+            margin-top: 25px;
+            letter-spacing: 1px;
+        }
+
+        .pie-pagina span {
+            color: #64748b;
+            font-size: 0.65rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contenedor-principal">
+        <div class="tarjeta">
+
+            <div class="neon-logo">
+                <div class="icono-telegram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.125 3.32833C21.125 3.32833 22.1875 2.92208 22.125 3.92208C22.0938 4.39083 21.8125 5.92208 21.5312 7.82833L20.5625 14.1721C20.5625 14.1721 20.4688 15.2033 19.6562 15.2971C18.8438 15.3908 17.625 14.5783 17.4062 14.4221C17.2188 14.2971 13.9062 12.1721 12.7188 11.1408C12.4062 10.8596 12.0625 10.3283 12.75 9.73458L17.25 5.42208C17.75 4.92208 18.25 3.79708 16.25 5.14083L10.625 8.95333C10.625 8.95333 9.96875 9.39083 8.71875 9.01583L6.03125 8.17208C6.03125 8.17208 5.0625 7.54708 6.75 6.92208L17.1562 2.67208C17.1562 2.67208 21.125 1.07833 21.125 3.32833Z" fill="white"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1>COMUNIDAD DE<br><span class="resaltado-morado">APOYO REAL</span></h1>
+            <p class="lema">NO ESTÁS SOLO, ESTAMOS CONTIGO.</p>
+
+            <div class="caja-info">
+                <h3>¿QUIÉNES SOMOS?</h3>
+                <p>Somos una comunidad de apoyo creada para escuchar, comprender y acompañar a personas que están pasando por momentos difíciles.</p>
+                <p class="subtexto">Aquí encontrarás un espacio seguro, sin juicios, donde puedes hablar, desahogarte y recibir el apoyo que necesitas.</p>
+
+                <div class="caracteristicas">
+                    <div><span>💜</span><p>APOYO EMOCIONAL</p></div>
+                    <div><span>🛡️</span><p>RESPETO Y EMPATÍA</p></div>
+                    <div><span>👥</span><p>COMUNIDAD ACTIVA</p></div>
+                    <div><span>🔒</span><p>ESPACIO SEGURO</p></div>
+                </div>
+            </div>
+
+            <a href="https://t.me/CARLDINERS" target="_blank" class="boton boton-morado">
+                <span class="texto-izq">UNIRME AL GRUPO</span>
+                <span class="texto-der">Telegram</span>
+            </a>
+
+            <a href="https://t.me/CARLDINERS" target="_blank" class="boton boton-azul">
+                <span class="texto-izq">ENLACE DE INVITACIÓN</span>
+                <span class="texto-der">Telegram</span>
+            </a>
+
+            <p class="pie-pagina">💜 JUNTOS SOMOS MÁS FUERTES<br><span>Tu historia importa. Tu bienestar también.</span></p>
+        </div>
+    </div>
+
+</body>
+</html>
